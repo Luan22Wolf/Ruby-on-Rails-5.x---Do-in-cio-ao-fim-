@@ -1,0 +1,51 @@
+==============================
+RVM - Comandos Essenciais
+==============================
+
+1. VERIFICAÇÃO E INFORMAÇÕES
+----------------------------
+rvm -v             # mostra a versão do RVM
+rvm list           # lista todas as versões de Ruby instaladas
+rvm list known     # lista todas as versões disponíveis para instalar
+rvm current        # mostra a versão do Ruby atualmente em uso
+rvm info           # informações detalhadas da instalação atual do Ruby
+
+2. INSTALAR E USAR VERSÕES DO RUBY
+----------------------------------
+rvm install 3.3.5       # instala Ruby 3.3.5
+rvm install 3.4.8       # instala outra versão
+rvm use 3.3.5           # usa Ruby 3.3.5 temporariamente
+rvm use 3.3.5 --default # define Ruby 3.3.5 como padrão
+rvm uninstall 3.1.0     # remove uma versão específica
+
+3. TRABALHANDO COM GEMSETS
+--------------------------
+rvm gemset list               # lista todos os gemsets
+rvm gemset create meu_projeto # cria um gemset chamado "meu_projeto"
+rvm gemset use meu_projeto    # ativa o gemset
+rvm gemset delete meu_projeto # deleta o gemset
+
+# Combinar Ruby + Gemset:
+rvm use 3.3.5@meu_projeto --default
+
+4. GERENCIAR RVM
+----------------
+rvm get stable       # atualiza o RVM para a versão estável
+rvm get head         # atualiza para a versão mais recente (beta/development)
+rvm reload           # recarrega o RVM no shell atual
+rvm implode          # remove completamente o RVM (cuidado!)
+rvm cleanup all      # limpa arquivos temporários e caches do RVM
+rvm fix-permissions  # corrige problemas de permissão
+
+5. DEBUG E AJUDA
+----------------
+rvm help             # mostra todos os comandos disponíveis
+rvm docs             # abre a documentação do RVM
+rvm requirements     # mostra dependências necessárias para instalar Ruby
+rvm info             # informações detalhadas da instalação do Ruby
+
+DICAS RÁPIDAS
+-------------
+- Sempre abra um terminal com login shell (source ~/.bashrc) para ter RVM disponível.
+- Para cada projeto Ruby, crie um gemset separado para evitar conflitos de gems.
+- Use "rvm use X@Y --default" para definir versão + gemset padrão.

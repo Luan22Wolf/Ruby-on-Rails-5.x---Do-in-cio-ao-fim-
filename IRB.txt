@@ -1,0 +1,8 @@
+- IRB = REPL, prompt para escriver o algoritimo da linguagem
+
+- CTRL + L = Limpa linha
+
+- Para execultar um arquivo no terminal -> ruby nome_do_arquivo.rb
+
+2.7.2 :001 >  "Luan Lobo Pereira".reverse
+ =>  "ariereP oboL nauL" 

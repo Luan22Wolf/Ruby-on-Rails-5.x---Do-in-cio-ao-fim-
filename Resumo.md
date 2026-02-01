@@ -1,136 +1,211 @@
 # Resumo de Aulas
 
-## Puts
-[Aula 01-puts](praticando/01.rb)
-
-
-## Váriaveis
-[Aula 02-variáveis](praticando/02.rb)
-
--> Váriaveis em Ruby são declaradas apenas "usando-a".
--> O Ruby infere o tipo da váriavel no momento  da "declaração".
-
-EX:
-    x = 1
-    y = 2.3
-    z = "Rails 5.x.x"
-Para verificar o tipo de váriavel, use o método .class
-EX:
-    irb
-    2.7.2 :001 > a = 2
-        => 2
-    2.7.2 :002 > a.class
-        => Integer
-
-## Saída e Padrão
-[Aula 03- Saida e entrada](praticando/03.rb)
-
--> A saída padrão STDOUT é representado pela "tela"
--> No Ruby usamos o puts para imprimir algo na tela
-    puts "Olá Mundo"
-
--> A entrada padrão STIND é representado pelo teclado
--> No Ruby usamos o gets (get = pegar , s = string) para "ler" algo do teclado
-    a = gets 
-
-EX:
-    puts "Qual seu nome ?"
-    name = gets
-    puts "Olá " + name 
-    puts nome.inspect
-
-saida:
-    Qual seu nome ?
--   Luan
--   Olá Luan
--   "Luan\n" 
-
--> Nota-se este "\n", ele é o enter do teclado que foi pego
-
--> O Código de formatação \n indica "new line", ou seja, adiciona uma nova linha, ou, como dizem "Quebra de linha".
--> O .chomp é um método que remove o código de formatação \n do elemento ao qual foi aplicado. 
-
-EX:
-    puts "Qual seu nome ?"
-    name = gets.chomp
-    puts "Olá " + name 
-    puts nome.inspect
-    
-saida:
-    Qual seu nome ?
--   Luan
--   Olá Luan
--   "Luan" 
-
--> Coerção, cast ou casting é o procedimento que fazemos para "transformar" o conteúdo de uma variável/entrada em outro tipo.
--> Não modificamos a variável, apenas "interpretamos" ela como um tipo que queremos
-
-EX:
-    gets.to_i ( Int )
-    x = "2.5"
-    x.to_f ( Float )
-
-
-## Condicionais (if, unless, case e estrutura condicional ternária)
-[Aula 04 - Condicionais](/praticando/03.rb)
-
-## Operadores Relacionais
-[Aula 05 - Relacionais](/praticando/05.rb)
-
--> Operadores Relacionais e Aritméticos
-
--> Relacionais
-    -> Maior ( > )
-    -> Menor ( < )
-    -> Maior igual ( >= )
-    -> Menor igual ( <= )
-    -> Igual ( == )
-    -> Diferente ( != )
-
--> Aritméticos
-    -> Soma ( + )
-    -> Subtração ( - )
-    -> Multiplicação ( * )
-    -> Divisão ( / )
-    -> Potência ( ** )
-    -> Módulo - Resto da divisão ( % )
-
-
-=======================================================
-## Comandos e informações
-[pry](/arquivos/pry.txt)
-[IRB](/arquivos/IRB.txt)
-[comandos_rvm](/arquivos/comandos_rvm.txt)
-
 ## Aulas
-[Aula 01-puts](praticando/01.rb)
-[Aula 02-variáveis](praticando/02.rb)
-[Aula 03-Inserção e Coerção de dados](praticando/03.rb)
-=======================================================
 
-## Versões Ruby 2.3 vs 2.4+
+- [Aula 01 – Puts](praticando/01.rb)
+- [Aula 02 – Variáveis](praticando/02.rb)
+- [Aula 03 – Saída e Entrada](praticando/03.rb)
+- [Aula 04 – Condicionais](praticando/04.rb)
+- [Aula 05 – Operadores Relacionais e Aritméticos](praticando/05.rb)
+- [Aula 06 – Estruturas de Repetição](praticando/06.rb)
+- [Aula 07 – Arrays e Vetores](praticando/07.rb)
 
--> 2.3
-    Fixnum representa os inteiros
-    Bignum representa os números "inteiros gigantes"
+---
 
--> 2.4+
-    Interge representa todos os números inteiros
+## Conceitos Básicos-Ruby
 
-EX:
--> Underline para ver quantos zeros
--> Versão 2.7.2
-    2.7.2 :001 > w = 1_000_000 
-     => 1000000 
-    2.7.2 :002 > w.class
-        => Integer 
-    
--> Versão 2.3.7
-    2.3.7 :01 > x = 1
-         => 1 
-    2.3.7 :02 > x.class
-        => Fixnum 
-    2.3.7 :03 > y = 1_000_000_000_000_000_000_000_000_000
-         => 1000000000000000000000000000 
-    2.3.7 :04 > y.class
-        => Bignum 
+### Puts
+[Aula 01 – Puts](praticando/01.rb)
+
+-> Utilizado para imprimir informações na saída padrão (STDOUT).
+
+---
+
+### Variáveis
+[Aula 02 – Variáveis](praticando/02.rb)
+
+* Variáveis em Ruby são declaradas apenas ao serem usadas.
+* O Ruby infere automaticamente o tipo da variável no momento da atribuição.
+
+**Exemplo:**
+
+```ruby
+x = 1
+y = 2.3
+z = "Rails 5.x.x"
+```
+
+-> Para verificar o tipo de uma variável, utilize o método `.class`.
+
+```ruby
+a = 2
+a.class # => Integer
+```
+
+---
+
+### Entrada e Saída Padrão
+[Aula 03 – Entrada e Saída](praticando/03.rb)
+
+* **STDOUT** representa a tela (saída)
+* **STDIN** representa o teclado (entrada)
+
+```ruby
+puts "Olá Mundo"
+```
+
+```ruby
+puts "Qual seu nome?"
+name = gets
+puts "Olá " + name
+puts name.inspect
+```
+
+Saída:
+
+```
+Qual seu nome?
+Luan
+Olá Luan
+"Luan\n"
+```
+
+* `\n` representa uma quebra de linha (new line)
+* O método `.chomp` remove o `\n`
+
+```ruby
+name = gets.chomp
+```
+
+---
+
+### Coerção (Casting)
+
+-> Transformação do tipo de um valor sem alterar a variável original.
+
+```ruby
+gets.to_i  # Integer
+x = "2.5"
+x.to_f     # Float
+```
+
+---
+
+### Condicionais
+[Aula 04 – Condicionais](praticando/04.rb)
+
+* `if`
+* `unless`
+* `case`
+* Operador ternário
+
+---
+
+### Operadores
+[Aula 05 – Operadores Relacionais e Aritméticos](praticando/05.rb)
+
+**Relacionais**
+
+* Maior: `>`
+* Menor: `<`
+* Maior ou igual: `>=`
+* Menor ou igual: `<=`
+* Igual: `==`
+* Diferente: `!=`
+
+**Aritméticos**
+
+* Soma: `+`
+* Subtração: `-`
+* Multiplicação: `*`
+* Divisão: `/`
+* Potência: `**`
+* Módulo: `%`
+
+---
+
+### Estruturas de Repetição
+[Aula 06 – Estruturas de Repetição](praticando/06.rb)
+
+#### while
+
+-> Executa um bloco de código enquanto uma condição for verdadeira.
+
+```ruby
+c = 1
+num = 10
+
+while c <= num
+  puts "Contando... #{c}"
+  c += 1
+end
+```
+
+#### each
+
+-> Iterador utilizado para percorrer coleções.
+
+```ruby
+(0..5).each do |i|
+  puts "O valor lido foi: #{i}"
+end
+```
+
+---
+
+### Vetores / Array
+[Aula 07 – Arrays e Vetores](praticando/07.rb)
+
+-> Coleções ordenadas que armazenam múltiplos valores.
+-> Você pode declarar/usar de duas formas:
+
+``` ruby
+a = [15, 62, 73, 48]
+```
+Ou 
+``` ruby
+a = [] ou a.Array.new
+a.push(15)
+a.push(62)
+```
+-> Para acessar, use o índice:
+``` ruby
+puts a.[0] # Primeiro item do array
+```
+---
+
+## Comandos e Ferramentas
+
+* [Pry](arquivos/pry.txt)
+* [IRB](arquivos/IRB.txt)
+* [Comandos RVM](arquivos/comandos_rvm.txt)
+
+---
+
+## Versões do Ruby (2.3 vs 2.4+)
+
+### Ruby 2.3
+
+* `Fixnum`: inteiros
+* `Bignum`: inteiros muito grandes
+
+### Ruby 2.4+
+
+* `Integer`: unifica Fixnum e Bignum
+
+**Exemplo:**
+
+```ruby
+w = 1_000_000
+w.class # => Integer
+```
+
+Em Ruby 2.3:
+
+```ruby
+x = 1
+x.class # => Fixnum
+
+y = 1_000_000_000_000_000_000
+y.class # => Bignum
+```

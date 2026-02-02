@@ -10,8 +10,9 @@
 - [Aula 06 – Estruturas de Repetição](/basico_ruby/06.rb)
 - [Aula 07 – Arrays e Vetores](/basico_ruby/07.rb)
 - [Aula 08 - Hashes](/basico_ruby/08.rb)
-- [Aula 09- Strings](/basico_ruby/09.rb)
-
+- [Aula 09- Strings](/basico_ruby/09.rb) 
+- [Aula 10 - Simbolos](/basico_ruby/10.rb) 
+- [Aula 11 - Tipos primitivos vs complexos](/basico_ruby/11.rb) 
 
 ---
 
@@ -345,6 +346,28 @@ EX:
   -> Uma **Variável** pode ser alterada, varia de valor
   -> Uma **Contante** é imutável, declara com letra *MAIÚSCULA*
 
+---
+
+## Tipos primitivos e complexos
+[Aula 11 - Tipos primitivos vs complexos](/basico_ruby/11.rb) 
+
+-> Tipos primitivos
+  EX:
+  ``` ruby 
+  x = 1 #Inteiro
+  y = 3.4 # Real / Float 
+  z = "abc" # Caracteres / String 
+  w = true # Lógico / Booleano 
+  ``` 
+-> Usamos os tipos **primitivos** para criar tipos **complexos**
+-> Podemos dizer que os tipos complexos são as **classes/objetos**
+  EX: 
+  -> A classe *Date* 
+    dd/mm/yyyy
+    22/12/2009
+    i ci ci => int(22) carac+int("/" + 12)  carac+int("/" + 2009) 
+
+--------------------------------------
 ## Comandos e Ferramentas
 
 * [Pry](arquivos/pry.txt)

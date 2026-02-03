@@ -26,11 +26,11 @@
 
 -> Os *métodos* são as *ações* ( **de um carro** )
     EX:
-    -> Acelera , freia, liga o farol , buzina ...
+    -> Acelera , freia, liga o farol , buzina, volante ...
 
 -> Os *atributos* são *características* ( **de um carro** )
     EX: 
-    -> Cor cinza, possui pneus aro 13, faróis, volante ...
+    -> Cor cinza, possui pneus aro 13, volante azul, buzina de caminhão ...
 
 -> **Tudo no Ruby é objeto!** 
     EX: 
